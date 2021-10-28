@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 1</title>
+    <script>
+
+        function add() {
+
+            let qntL = document.getElementById("qntL").value
+            let tableC = document.getElementById("tableC");
+           
+
+            let tr;
+            let td;
+            let td2;
+
+            let datetime = new Date()
+            let milS = datetime.getMilliseconds();
+            
+
+            if (qntL == "") {
+                alert("Não foi digitado nenhum numero ");
+                qntL.focus();
+            } else {
+                var Linha;
+
+                for (Linha = 0; Linha < qntL; Linha++) {
+
+                   tr = tableC.insertRow() ;
+                   td = tr.insertCell(0);
+                   td2 = tr.insertCell(1);
+
+                   td.appendChild(document.createTextNode(milS))
+                   td2.appendChild(document.createTextNode(Math.random().toPrecision(5)))
+                   
+                
+                }
+
+            } 
+
+            
+        }
+    </script>
+</head>
+
+<body>
+    <form action="" name="dados" id="dados" method="post">
+
+        <label for="qntL"> Digite a quantidade de linhas :</label>
+        <input type="number" name="qntL" id="qntL">
+
+        <input type="button" id="addLinhas" value="Adicionar" onclick="add()">
+    </form>
+    <br />
+    <table id="tableC" border="1">
+        <tr>
+            <td>
+                Milisegundos
+            </td>
+            <td>
+                N° Aleatório
+            </td>
+        </tr>
+
+    </table>
+
+</html>

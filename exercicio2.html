@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <script>
+    
+         function AddTotal(){
+
+        
+        
+        let table = document.getElementById("Tabela");
+        let  row = table.insertRow();
+        let  cel1 = row.insertCell(0);
+        let  cel2 = row.insertCell(1);
+
+        let tdsValores = document.querySelectorAll('.idade')
+    
+        let total = 0 // Variável auxiliar
+    
+    
+        for (let i = 0; i < tdsValores.length; i++) {
+    
+            let valor = parseFloat(tdsValores[i].textContent)
+    
+            total = total + valor // ou total += valor
+        }
+        
+        cel1.appendChild(document.createTextNode("TOTAL"))
+        cel2.appendChild(document.createTextNode(total)) // imprime no console o valor final de total
+    }   
+    </script>
+
+</head>
+<body>
+    <table border="1" id="Tabela">
+        <tr >
+            <td class="NOME">Julia</td>
+            <td class="idade">18</td>
+        </tr>
+    
+        <tr >
+            <td class="NOME">Enzo</td>
+            <td class="idade">5</td>
+        </tr>
+        <tr >
+            <td class="NOME">Mariana</td>
+            <td class="idade">32</td>
+        </tr>
+    </table>
+    <input type="button"  onclick="AddTotal()" value="Calcular">
+
+</body>
+</html>

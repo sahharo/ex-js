@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .section-input {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50px 10px;
+  }
+  
+  .section-input input {
+    padding: 5px;
+    margin: 10px;
+  }
+  
+  .table-content {
+    border: 1px solid black;
+    width: 500px;
+    height: 500px;
+  }
+  
+  tr {
+    border: 1px solid black;
+  }
+  
+  td {
+    text-align: center;
+    border: 1px solid black;
+  }
